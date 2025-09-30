@@ -25,15 +25,31 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#education-experience">Education & Experience</a></li>
-                    
+                    <li class="nav-item"><a class="nav-link" href="#education-experience">Experience</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
+                <!-- Theme controls for mobile (inside collapse) -->
+                <div class="theme-controls-mobile d-flex flex-column align-items-center justify-content-center gap-2 mt-3 d-lg-none">
+                    <div class="color-picker mb-2">
+                        <div class="color-option active" style="background: #6366f1;" data-primary="#6366f1" data-secondary="#8b5cf6"></div>
+                        <div class="color-option" style="background: #06b6d4;" data-primary="#06b6d4" data-secondary="#0891b2"></div>
+                        <div class="color-option" style="background: #10b981;" data-primary="#10b981" data-secondary="#059669"></div>
+                        <div class="color-option" style="background: #f59e0b;" data-primary="#f59e0b" data-secondary="#d97706"></div>
+                        <div class="color-option" style="background: #ef4444;" data-primary="#ef4444" data-secondary="#dc2626"></div>
+                    </div>
+                    <button class="theme-toggle mb-2" id="themeToggleMobile" title="Toggle dark/light theme">
+                        <i class="fas fa-moon" id="themeIconMobile"></i>
+                    </button>
+                    <button id="translateToggleMobile" class="theme-toggle" title="Toggle english/arabic theme">
+                        <i class="fas fa-language"></i>
+                    </button>
+                </div>
             </div>
             
+            <!-- Desktop theme controls (unchanged) -->
             <div class="theme-controls d-none d-lg-flex">
                 <div class="color-picker">
                     <div class="color-option active" style="background: #6366f1;" data-primary="#6366f1" data-secondary="#8b5cf6"></div>
@@ -45,7 +61,12 @@
                 <button class="theme-toggle" id="themeToggle" title="Toggle dark/light theme">
                     <i class="fas fa-moon" id="themeIcon"></i>
                 </button>
+                <button id="translateToggle" class="theme-toggle" title="Toggle english/arabic theme">
+                    <i class="fas fa-language"></i>
+                </button>
             </div>
+            <!-- Translation Toggle Button -->
+            
             
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" title="Toggle navigation menu">
                 <i class="fas fa-bars text-light"></i>
@@ -89,6 +110,9 @@
                         </a>
                         <a href="#contact" class="btn-modern btn-outline-modern" style="background: transparent; color: var(--primary-color); border: 2px solid var(--primary-color); padding: 0.8rem 2rem; border-radius: 50px; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease; text-decoration: none; display: inline-block;">
                             <i class="fas fa-envelope me-2"></i>Get In Touch
+                        </a>
+                        <a href="Nadia_Hossny.pdf" download class="btn-modern btn-outline-modern" style="background: transparent; color: var(--primary-color); border: 2px solid var(--primary-color); padding: 0.8rem 2rem; border-radius: 50px; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease; text-decoration: none; display: inline-block;">
+                            <i class="fas fa-file-download me-2"></i>Download My Resume
                         </a>
                     </div>
                 </div>
@@ -135,27 +159,26 @@
                     </div>
                 </div>
                 
-                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+                <!-- Make stats responsive: full width on mobile, side-by-side on desktop -->
+                <div class="col-lg-6 mt-4 mt-lg-2" data-aos="fade-left" data-aos-delay="300">
                     <div class="stats-container">
-                        <div class="stat-item">
-                            <div class="stat-number" data-target="22">0</div>
-                            <div class="stat-label">Projects Completed</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number" data-target="3.73">0</div>
-                            <div class="stat-label">GPA</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number" data-target="15">0</div>
-                            <div class="stat-label">Certifications</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number" data-target="4">0</div>
-                            <div class="stat-label">Leadership Roles</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <div class="stat-item text-center">
+    <div class="stat-number" data-target="3.73">0</div>
+    <div class="stat-label">GPA</div>
+  </div>
+  <div class="stat-item text-center">
+    <div class="stat-number" data-target="15">0</div>
+    <div class="stat-label">Certifications</div>
+  </div>
+  <div class="stat-item text-center">
+    <div class="stat-number" data-target="22">0</div>
+    <div class="stat-label">Projects Completed</div>
+  </div>
+  <div class="stat-item text-center">
+    <div class="stat-number" data-target="4">0</div>
+    <div class="stat-label">Leadership Roles</div>
+  </div>
+</div>
         </div>
     </section>
 
@@ -302,7 +325,6 @@
                                 </div>
                             </div>
                             
-                            <!-- Add more as needed, using badges: Internship, Freelance, Part-time, Student Leadership, etc. -->
                         </div>
                     </div>
                 </div>
@@ -371,7 +393,7 @@
                             <div class="skill-card" data-bs-toggle="modal" data-bs-target="#skillModal" onclick="showSkillDetails('Database Management', 'fas fa-database', 'MySQL, SQL Server, Firebase Firestore, Supabase, MongoDB, Database Design, Query Optimization, Data Modeling')">
                                 <div class="skill-icon"><i class="fas fa-database"></i></div>
                                 <div class="skill-title">Databases</div>
-                                <div class="skill-items">MySQL, SQL Server, Firebase</div>
+                                <div class="skill-items">MySQL, SQL Server, MongoDB, Firebase</div>
                             </div>
                             
                             <div class="skill-card" data-bs-toggle="modal" data-bs-target="#skillModal" onclick="showSkillDetails('UI/UX Design', 'fas fa-palette', 'Figma, Adobe XD, Wireframing, Prototyping, User Research, Design Systems, Usability Testing, Information Architecture')">
@@ -392,12 +414,10 @@
                             <h4 style="color: var(--primary-color); margin-bottom: 1rem; font-size: 1.2rem;">Programming Languages</h4>
                             <div class="d-flex flex-wrap gap-2">
                                 <span class="tech-badge">JavaScript</span>
-                                <span class="tech-badge">TypeScript</span>
                                 <span class="tech-badge">Dart</span>
                                 <span class="tech-badge">Java</span>
                                 <span class="tech-badge">C++</span>
                                 <span class="tech-badge">Python</span>
-                                <span class="tech-badge">PHP</span>
                                 <span class="tech-badge">C#</span>
                             </div>
                         </div>
@@ -630,73 +650,97 @@
 
     <!-- Testimonial Section -->
     <section id="testimonials" class="section">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Client Testimonials</h2>
-            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
-                What clients say about my work
-            </p>
-            
-            <div class="testimonial-carousel-container">
-                <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    </div>
-                    
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <div class="testimonial-card">
-                                        <div class="testimonial-icon">
-                                            <i class="fas fa-quote-left"></i>
-                                        </div>
-                                        <blockquote class="testimonial-quote">
-                                            "Nadia has an exceptional eye for design and a strong ability to translate abstract ideas into visuals that communicate clearly and creatively. She combines modern aesthetics with originality while maintaining consistency with brand identity. Her work always reflects professionalism, attention to detail, and a deep understanding of design principles. Nadia is a reliable and talented designer who elevates every project she works on."
-                                        </blockquote>
-                                        <div class="testimonial-author">
-                                            <h5>HR Manager</h5>
-                                            <a href="https://www.linkedin.com/company/revelio-data-solutions/" target="_blank" rel="noopener">Revelio</a>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="carousel-item">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <div class="testimonial-card">
-                                        <div class="testimonial-icon">
-                                            <i class="fas fa-quote-left"></i>
-                                        </div>
-                                        <blockquote class="testimonial-quote">
-                                            "Nadia delivered outstanding work on our last campaign. Her creativity in design, attention to detail, and strategic approach to social media elevated the entire project. The campaign looked professional, engaging, and perfectly aligned with our brand identity. Her ability to blend strong visuals with clear messaging drove excellent engagement and results. Nadia's dedication, innovation, and leadership set a high standard for future campaigns — her contribution is highly valued and plays a big role in our success."
-                                        </blockquote>
-                                        <div class="testimonial-author">
-                                            <h5>Client</h5>
-                                            <a href="https://www.linkedin.com/in/codeify-modern-development-cmd-446159329/" target="_blank" rel="noopener">Codeify Modern Development</a>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Client Testimonials</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+            What clients say about my work
+        </p>
+        
+        <div class="testimonial-carousel-container">
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
+                
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="testimonial-card">
+                                    <div class="testimonial-icon">
+                                        <i class="fas fa-quote-left"></i>
+                                    </div>
+                                    <blockquote class="testimonial-quote">
+                                        "Having selected Nadia for roles in a student organization, a creative project, and my own
+startup, I can say without hesitation that she is one of the most reliable and passionate
+professionals I have ever worked with. Her ability to execute tasks flawlessly, manage
+her time effectively, and proactively learn new skills is remarkable. She is a gifted
+collaborator who consistently delivers exceptional results and has my highest and most
+sincere recommendation."
+                                    </blockquote>
+                                    <div class="testimonial-author">
+                                        <h5>CTO</h5>
+                                        <a href="https://www.linkedin.com/company/revelio-data-solutions/" target="_blank" rel="noopener">Revelio</a>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="testimonial-card">
+                                    <div class="testimonial-icon">
+                                        <i class="fas fa-quote-left"></i>
+                                    </div>
+                                    <blockquote class="testimonial-quote">
+                                        "Nadia has an exceptional eye for design and a strong ability to translate abstract ideas into visuals that communicate clearly and creatively. She combines modern aesthetics with originality while maintaining consistency with brand identity. Her work always reflects professionalism, attention to detail, and a deep understanding of design principles. Nadia is a reliable and talented designer who elevates every project she works on."
+                                    </blockquote>
+                                    <div class="testimonial-author">
+                                        <h5>HR Manager</h5>
+                                        <a href="https://www.linkedin.com/company/revelio-data-solutions/" target="_blank" rel="noopener">Revelio</a>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="testimonial-card">
+                                    <div class="testimonial-icon">
+                                        <i class="fas fa-quote-left"></i>
+                                    </div>
+                                    <blockquote class="testimonial-quote">
+                                        "Nadia delivered outstanding work on our last campaign. Her creativity in design, attention to detail, and strategic approach to social media elevated the entire project. The campaign looked professional, engaging, and perfectly aligned with our brand identity. Her ability to blend strong visuals with clear messaging drove excellent engagement and results. Nadia's dedication, innovation, and leadership set a high standard for future campaigns — her contribution is highly valued and plays a big role in our success."
+                                    </blockquote>
+                                    <div class="testimonial-author">
+                                        <h5>Client</h5>
+                                        <a href="https://www.linkedin.com/in/codeify-modern-development-cmd-446159329/" target="_blank" rel="noopener">Codeify Modern Development</a>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Contact Section -->
     <section id="contact" class="section section-alt">
@@ -744,6 +788,9 @@
                     <a href="tel:+201064943439" class="btn-modern btn-outline-modern">
                         <i class="fas fa-phone me-2"></i>Call Now
                     </a>
+                    <a href="Nadia_Hossny.pdf" download class="btn-modern btn-outline-modern" style="background: transparent; color: var(--primary-color); border: 2px solid var(--primary-color); padding: 0.8rem 2rem; border-radius: 50px; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease; text-decoration: none; display: inline-block;">
+                            <i class="fas fa-file-download me-2"></i>Download My Resume
+                        </a>
                 </div>
                 <p class="availability-text" style="color: var(--text-muted); font-size: 0.9rem;">
                     Available for freelance projects and full-time opportunities
@@ -770,6 +817,9 @@
                 </a>
                 <a href="https://www.behance.net/nadiahossny" target="_blank" rel="noopener" class="social-link" title="Behance">
                     <i class="fab fa-behance"></i>
+                </a>
+                <a href="Nadia_Hossny.pdf" download class="hero-social-link" title="Download Resume">
+                    <i class="fas fa-file-download"></i>
                 </a>
             </div>
             
@@ -836,7 +886,7 @@
     </div>
 
     <!-- Skill Details Modal -->
-    <div class="modal fade" id="skillModal" tabindex="-1" aria-labelledby="skillModalLabel" aria-hidden="true">
+    <!-- <div class="modal fade" id="skillModal" tabindex="-1" aria-labelledby="skillModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -844,17 +894,16 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body" id="skillModalBody">
-                    <!-- Skill content will be dynamically inserted here -->
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Achievement Details Modal -->
-    <div class="modal fade" id="achievementModal" tabindex="-1" aria-labelledby="achievementModalLabel" aria-hidden="true">
+    <!-- <div class="modal fade" id="achievementModal" tabindex="-1" aria-labelledby="achievementModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -862,14 +911,13 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body" id="achievementModalBody">
-                    <!-- Achievement content will be dynamically inserted here -->
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Skills & Achievements Side by Side -->
     <!-- <section id="skills-achievements" class="section section-alt">
         <div class="container">
@@ -935,8 +983,225 @@
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="js/script.js">
+    <script src="js/script.js"></script>
+    <script>
+    // Stats counter animation for About section
+    document.addEventListener("DOMContentLoaded", function() {
+        function animateStats() {
+            document.querySelectorAll('.stat-number').forEach(function(el) {
+                const target = parseFloat(el.getAttribute('data-target'));
+                if (!el._animated) {
+                    let count = 0;
+                    const isFloat = target % 1 !== 0;
+                    const duration = 1200;
+                    const frameRate = 30;
+                    const totalFrames = Math.round(duration / (1000 / frameRate));
+                    let frame = 0;
+                    const increment = target / totalFrames;
+                    function update() {
+                        frame++;
+                        count += increment;
+                        if (frame < totalFrames) {
+                            el.textContent = isFloat ? count.toFixed(2) : Math.floor(count);
+                            requestAnimationFrame(update);
+                        } else {
+                            el.textContent = target;
+                        }
+                    }
+                    update();
+                    el._animated = true;
+                }
+            });
+        }
+        // Use IntersectionObserver for better performance
+        const aboutSection = document.querySelector('#about');
+        let statsAnimated = false;
+        function tryAnimateStats() {
+            if (!statsAnimated && aboutSection) {
+                const rect = aboutSection.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    animateStats();
+                    statsAnimated = true;
+                }
+            }
+        }
+        if (aboutSection) {
+            // Lower threshold for mobile, and add scroll fallback
+            const observer = new IntersectionObserver(function(entries) {
+                if (entries[0].isIntersecting) {
+                    animateStats();
+                    statsAnimated = true;
+                    observer.disconnect();
+                }
+            }, { threshold: 0.05 }); // Lower threshold for mobile
+            observer.observe(aboutSection);
 
-    </script>
+            // Fallback for mobile browsers that may not fire observer
+            window.addEventListener('scroll', tryAnimateStats, { passive: true });
+            window.addEventListener('resize', tryAnimateStats, { passive: true });
+            // Also try once on load
+            setTimeout(tryAnimateStats, 500);
+        }
+    });
+
+    // Translation logic
+    const translations = {
+        ar: {
+            // Navigation
+            "Home": "الرئيسية",
+            "About": "عنّي",
+            "Education & Experience": "التعليم والخبرة",
+            "Projects": "المشاريع",
+            "Services": "الخدمات",
+            "Testimonials": "آراء العملاء",
+            "Contact": "تواصل",
+            // Hero
+            "View My Work": "شاهد أعمالي",
+            "Get In Touch": "تواصل معي",
+            "Download My Resume": "تحميل السيرة الذاتية",
+            "Frontend Developer & UI/UX Designer": "مطور واجهات المستخدم ومصمم تجربة المستخدم",
+            "Flutter Mobile App Developer": "مطور تطبيقات Flutter",
+            "Full-Stack Developer": "مطور برمجيات متكامل",
+            // About
+            "About Me": "عنّي",
+            "Hi, I'm Nadia Hossny, a UI/UX Designer and Frontend Developer with a Computer Science background. I create intuitive, user-centered experiences by understanding user needs and adapting solutions that are both engaging and effective.": "مرحباً، أنا نادية حسني، مصممة تجربة المستخدم ومطورة واجهات أمامية بخلفية في علوم الحاسب. أبتكر تجارب سهلة الاستخدام من خلال فهم احتياجات المستخدم وتقديم حلول فعّالة وجذابة.",
+            "With experience in Flutter, React, and modern web technologies, I deliver value from design to scalable applications, adapting to teams and tools while maintaining quality.": "لدي خبرة في Flutter وReact وتقنيات الويب الحديثة، أقدم قيمة من التصميم إلى التطبيقات القابلة للتوسع، وأتكيف مع الفرق والأدوات مع الحفاظ على الجودة.",
+            "When you work with me, you get more than design or code, you get a partner who listens, adapts, and delivers user-driven solutions that make a real impact.": "عند العمل معي، ستحصل على أكثر من مجرد تصميم أو برمجة، ستحصل على شريك يستمع ويتكيف ويقدم حلولاً تركز على المستخدم وتحقق تأثيراً حقيقياً.",
+            "Projects Completed": "المشاريع المنجزة",
+            "GPA": "المعدل التراكمي",
+            "Certifications": "الشهادات",
+            "Leadership Roles": "الأدوار القيادية",
+            // Education & Experience
+            "Education & Experience": "التعليم والخبرة",
+            "Education": "التعليم",
+            "Experience": "الخبرة",
+            "Technical Skills": "المهارات التقنية",
+            "Programming Languages": "لغات البرمجة",
+            // Projects
+            "Featured Projects": "المشاريع المميزة",
+            "Real-world applications showcasing technical expertise and creative solutions": "تطبيقات واقعية تعرض الخبرة التقنية والحلول الإبداعية",
+            // Services
+            "Services": "الخدمات",
+            "Comprehensive solutions for your digital needs": "حلول شاملة لاحتياجاتك الرقمية",
+            // Testimonials
+            "Client Testimonials": "آراء العملاء",
+            "What clients say about my work": "ماذا يقول العملاء عن عملي",
+            // Contact
+            "Let's Work Together": "لنبدأ العمل معاً",
+            "Ready to bring your ideas to life? Let's create something amazing together": "جاهز لتحويل أفكارك إلى واقع؟ دعنا نبتكر شيئاً رائعاً معاً",
+            "Phone": "الهاتف",
+            "Email": "البريد الإلكتروني",
+            "Location": "الموقع",
+            "Likedin": "لينكدإن",
+            "Send Email": "إرسال بريد إلكتروني",
+            "Call Now": "اتصل الآن",
+            "Available for freelance projects and full-time opportunities": "متاح للمشاريع المستقلة والفرص الوظيفية الكاملة",
+            // Footer
+            "Download Resume": "تحميل السيرة الذاتية",
+            "Made with": "تم الإنشاء بواسطة",
+            "and lots of creativity.": "وكثير من الإبداع.",
+            // ...add more as needed
+        },
+        en: {} // English is default, so no translations needed
+    };
+
+    let currentLang = 'en';
+
+    function translatePage(lang) {
+        currentLang = lang;
+        // Translate static text
+        Object.keys(translations[lang]).forEach(key => {
+            // Find elements by text content
+            document.querySelectorAll('*').forEach(el => {
+                if (el.childNodes.length === 1 && el.childNodes[0].nodeType === 3) {
+                    if (el.textContent.trim() === key) {
+                        el.textContent = translations[lang][key];
+                    }
+                }
+            });
+        });
+
+        // Translate placeholders, buttons, and labels
+        document.querySelectorAll('[data-translate]').forEach(el => {
+            const key = el.getAttribute('data-translate');
+            if (translations[lang][key]) {
+                el.textContent = translations[lang][key];
+            }
+        });
+
+        // Change direction for Arabic
+        document.body.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+        document.documentElement.lang = (lang === 'ar') ? 'ar' : 'en';
+
+        // Update toggle button label
+        document.getElementById('translateLabel').textContent = (lang === 'ar') ? 'English' : 'العربية';
+    }
+
+    document.getElementById('translateToggle').addEventListener('click', function() {
+        if (currentLang === 'en') {
+            translatePage('ar');
+        } else {
+            window.location.reload(); // reload to restore English
+        }
+    });
+
+    // --- Mobile theme controls logic ---
+    // Sync color pickers (desktop & mobile)
+    function syncColorPickers() {
+        const allColorOptions = document.querySelectorAll('.color-option');
+        allColorOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                allColorOptions.forEach(opt => opt.classList.remove('active'));
+                option.classList.add('active');
+                const primary = option.dataset.primary;
+                const secondary = option.dataset.secondary;
+                document.documentElement.style.setProperty('--primary-color', primary);
+                document.documentElement.style.setProperty('--secondary-color', secondary);
+                document.documentElement.style.setProperty('--gradient-primary', `linear-gradient(135deg, ${primary}, ${secondary})`);
+                localStorage.setItem('primaryColor', primary);
+                localStorage.setItem('secondaryColor', secondary);
+            });
+        });
+    }
+    syncColorPickers();
+
+    // Theme toggle for mobile
+    function updateThemeIconAll(theme) {
+        document.getElementById('themeIcon').className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        document.getElementById('themeIconMobile').className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    }
+    const themeToggleMobile = document.getElementById('themeToggleMobile');
+    if (themeToggleMobile) {
+        themeToggleMobile.addEventListener('click', () => {
+            const body = document.body;
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIconAll(newTheme);
+        });
+    }
+    // Keep icons in sync on load
+    document.addEventListener('DOMContentLoaded', function() {
+        const theme = document.body.getAttribute('data-theme') || 'dark';
+        updateThemeIconAll(theme);
+    });
+
+    // Translation toggle for mobile
+    const translateToggle = document.getElementById('translateToggle');
+    const translateToggleMobile = document.getElementById('translateToggleMobile');
+    if (translateToggleMobile) {
+        translateToggleMobile.addEventListener('click', function() {
+            if (typeof translatePage === 'function') {
+                if (window.currentLang === 'en') {
+                    translatePage('ar');
+                } else {
+                    window.location.reload();
+                }
+            }
+        });
+    }
+    // ...existing code...
+</script>
 </body>
 </html>
