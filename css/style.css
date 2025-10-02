@@ -449,7 +449,7 @@ body {
     gap: 2rem;
 }
 .stat-item {
-    height:10px;
+    height:190px;
     text-align: center;
     padding: 2rem;
     background: var(--bg-secondary);
@@ -1085,7 +1085,8 @@ body {
     bottom: -50px;
 }
 .carousel-indicators button {
-   
+    width:12px;
+    height:12px;
     border-radius: 40%;
     background: var(--primary-color);
     border: none;
